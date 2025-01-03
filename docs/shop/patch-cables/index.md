@@ -1,6 +1,6 @@
 ---
 template: shop-item.html
-title: Neptune Kit
+title: Patch Cables
 show-title: True
 product:
   description: "<p>Lovely, high-quality braided &#8539;\u201D mono Eurorack patch\
