@@ -1,0 +1,50 @@
+site_name: "Stop Making Synths"
+site_url: https://winterbloom.com
+repo_url: "https://github.com/wntrblm/winterbloom.com"
+edit_uri: edit/main/docs
+theme:
+    name: wintersong
+    custom_dir: overrides
+plugins: []
+markdown_extensions:
+    - abbr
+    - admonition
+    - def_list
+    - attr_list
+    - footnotes
+    - md_in_html
+    - toc:
+          permalink: "#"
+          toc_depth: 2-2
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.blocks.tab:
+          alternate_style: true
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          hide_protocol: true
+          repo_url_shortener: true
+          social_url_shortener: true
+          normalize_issue_symbols: true
+          repo_url_shorthand: true
+          user: wntrblm
+          repo: winter
+    - pymdownx.mark
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+nav:
+    - "Home": index.md
+    - "Archive": shop/index.md
+    - "Merch": merch.md
+    - "Support": support.md

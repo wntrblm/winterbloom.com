@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% set product = page.meta.product %}
+
+{% block meta_description %}{{product.short_description}}{% endblock %}
+{% block meta_og_type %}product{% endblock %}
+{% block meta_image %}{{ absolute_url(product.cover_image_url) }}{% endblock %}
+{% block title %}{{product.name}} - {{super()}}{% endblock %}
+
+{% macro tags(class) %}
+  <!-- product tags -->
+  {% if product.tags %}
+  <div class="product-tags {{class}}">
+    <div class="tags has-addons">
+      <span class="tag">
+        <winter-icon>attach_money</winter-icon>
+      </span>
+      <span class="tag">{{product.price}} MSRP</span>
+    </div>
+    {% for tag in product.tags %}
+      {% if tag.link %}
+        <a class="tags has-addons is-color-{{tag.color}}" title="{{tag.description}}" href="{{tag.link}}" target="_blank" rel="noopener">
+      {% else %}
+        <div class="tags has-addons is-color-{{tag.color}}" title="{{tag.description}}">
+      {% endif %}
+        <span class="tag">
+          {% if tag.icon_text %}
+            {{tag.icon_text}}
+          {% else %}
+            <winter-icon>{{tag.icon}}</winter-icon>
+          {% endif %}
+        </span>
+        <span class="tag">{{tag.text}}</span>
+      {% if tag.link %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endmacro %}
+
+{% block content %}
+<article class="content shop-item">
+  <h1>{{product.name}}</h1>
+
+  <winter-carousel>
+    {% for image in product.images %}
+      <img src="/shop/{{product.slug}}/images/{{image.chonk}}">
+    {% endfor %}
+  </winter-carousel>
+
+  <div class="product-description">
+    {{product.description | safe}}
+  </div>
+
+  {{tags()}}
+</article>
+
+<link rel="stylesheet" href="{{ 'shop-item.css' | url }}" />
+{% endblock %}

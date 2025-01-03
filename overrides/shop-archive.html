@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article class="content shop-archive">
+    {% for file in pages if file.dest_uri.startswith("shop") and "product" in file.page.meta %}
+      {% set page = file.page %}
+      {% set product = page.meta.product %}
+      <a href="/shop/{{product.slug}}">
+        <img src="/shop/{{product.slug}}/images/{{product.images[0].medium_square}}">
+        {{file.page.title}}
+      </a>
+    {% endfor %}
+  </article>
+
+  <link rel="stylesheet" href="{{ 'shop-archive.css' | url }}" />
+{% endblock %}
