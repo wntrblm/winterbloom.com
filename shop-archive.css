@@ -1,0 +1,16 @@
+main .content.shop-archive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-family: var(--winter-font-decorative);
+        font-size: var(--winter-font-size-l);
+        color: var(--winter-purple-2);
+        text-decoration: none;
+    }
+}
