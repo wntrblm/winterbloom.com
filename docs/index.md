@@ -65,13 +65,13 @@ Winterbloom would be nothing without the gracious support of some of the most in
 - New York Modular Society
 - Nina Zakharenko
 - Omi of Omiindustries
+- Rachel Barker
 - Roland & Enrica from Making Sound Machines
 - Rory of Allen Synthesis
 - Scotland Symons
 - Scott Shawcroft
 - Stijn & Priscilla from TiNRS
 - Tod Kurt
-- Sarah Ocean
 - Stephen & Lucian from Opulo
 - Steven & Will from Thonk
 - Tom & Cindy from Patchwerks
